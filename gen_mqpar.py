@@ -22,7 +22,7 @@ mqpar.close()
 
 
 # replace fasta path
-fasta_path = '/home/chen.alb/FASTA/swissprot_human_20180730.fasta'
+fasta_path = '/home/sleblanc/human-openprot-r1_3-refprots-grch38.83+grch38.p7+uniprot2017_09_27.fasta'
 fasta_path = ('<fastaFilePath>' + fasta_path + '</fastaFilePath>')
 mqpar_text = re.sub(r'\<fastaFilePath\>(.|\n|\r)*\<\/fastaFilePath\>', fasta_path, mqpar_text)
 
@@ -75,7 +75,7 @@ output_folder = re.sub(r'\.xml', '', output_folder)
 # remove the beginning "mqpar_", if it exists
 output_folder = re.sub(r'mqpar_', '', output_folder)
 # append the scratch folder
-output_folder = ('/scratch/chen.alb/' + output_folder)
+output_folder = ('/home/sleblanc/' + output_folder)
 
 # create the folder
 if not os.path.exists(output_folder):
